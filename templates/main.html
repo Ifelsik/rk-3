@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Фильмы</title>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td>
+                    <a href="main.html">Главная</a>
+                    <a href="edit.html">Изменения</a>
+                    <a href="remove.html">Удалить</a>
+                </td>
+            </tr>
+        </table>
+        <table border="1">
+            {% for film in films %}
+                <tr>
+                    <td> {{ film.ID }}</td>
+                    <td> {{ film.film_name }}</td>
+                    <td> {{ film.film_producer }}</td>
+                    <td> {{ film.year }}</td>
+                    <td> {{ film.category }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>
